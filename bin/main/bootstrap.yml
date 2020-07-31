@@ -1,0 +1,20 @@
+spring:
+    application:
+        name: demo-vault
+    profiles:
+        active: default
+    cloud:
+        vault:
+            authentication: TOKEN
+            uri: http://127.0.0.1:8200
+            token: s.hGIzopFzXDKHOT834OC0GUBS
+            kvVersion: 2
+            postgresql:
+                enabled: true
+                role: postgres
+                backend: postgresql
+                username-property: spring.datasource.username
+                password-property: spring.datasource.password
+    datasource:
+        platform: postgres
+        url: jdbc:postgresql://localhost:5432/demo-vault
